@@ -21,11 +21,6 @@ const MainPage = () => {
 
   return (
     <div>
-      <div id="header">
-        <div id="header-area">
-          <img src="images/icons/logo.png" alt="" />
-        </div>
-      </div>
       <div id="body">
         <div id="banner">
           <img src="images/banners/banner1.png" alt="" />
@@ -35,7 +30,7 @@ const MainPage = () => {
           {products.map((product, index) => {
             return (
               <div className="product-card" key={index}>
-                <Link to={"/products/" + index} className="product-link">
+                <Link to={"/products/" + product.id} className="product-link">
                   <div>
                     <img
                       src={product.imageUrl}
