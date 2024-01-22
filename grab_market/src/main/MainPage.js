@@ -6,9 +6,7 @@ const MainPage = () => {
   const [products, setProducts] = useState([]);
   const getProductData = () => {
     axios
-      .get(
-        "https://c3f27b4c-ed21-4144-97a3-fc171976ccb3.mock.pstmn.io/products"
-      )
+      .get("http://localhost:8080/products")
       .then((item) => setProducts(item.data.products))
       .catch((err) => {
         console.log(err);
