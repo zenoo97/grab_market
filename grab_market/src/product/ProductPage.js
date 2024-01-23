@@ -7,11 +7,8 @@ const ProductPage = () => {
   const [product, setProduct] = useState(null);
   const getProductData = async () => {
     await axios
-      .get(
-        "https://c3f27b4c-ed21-4144-97a3-fc171976ccb3.mock.pstmn.io/products/" +
-          id
-      )
-      .then((result) => setProduct(result.data))
+      .get("http://localhost:8080/products/" + id)
+      .then((result) => setProduct(result.data.product))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
